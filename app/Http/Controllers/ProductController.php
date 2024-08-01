@@ -44,7 +44,7 @@ class ProductController extends Controller
         return redirect()->route('product');
     }
 
-    public function update_product($id){
+    public function update_product(ProductModel $id){
         // $product = ProductModel::find($id);
         // return view('backend.update_product', compact('product'));
         echo $id;
@@ -76,5 +76,11 @@ class ProductController extends Controller
         $product = ProductModel::find($id);
         $product->delete();
         return redirect()->route('product');
+    }
+
+    public function product_edit($id){
+        $product2 = ProductModel::findOrFail($id);
+        dd($product2);
+        // return view('backend.edit_product', compact('product'));
     }
 }

@@ -94,12 +94,11 @@
                                         <h6>{{$product -> product_discount_price}}</h6>
                                     </td> -->
                                     <td class="d-flex gap-2">
-                                        <h6><a href="{{route('product_update',$product->id)}}"><i
+                                        <h6><a href="{{route('product_edit',$product->id)}}"><i
                                                     class="ri-edit-2-fill"></i></a>
                                         </h6>
 
-                                        <h6><a href="{{route('product_delete',$product->id)}}"><i
-                                                    class="ri-delete-bin-fill"></i></button></a>
+                                        <h6><a href="#"><i class="ri-delete-bin-fill"></i></button></a>
                                         </h6>
                                     </td>
 

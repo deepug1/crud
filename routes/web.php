@@ -23,8 +23,9 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('product', [ProductController::class, 'Product'])->name('product');
     Route::get('add_product', [ProductController::class, 'add_product'])->name('add_product');
     Route::post('add_product', [ProductController::class, 'store'])->name('product_store');
-    Route::get('/update_product/{$id}', [ProductController::class, 'update_product'])->name('product_update');
-    // Route::post('update_product', [ProductController::class, 'update'])->name('product_update_store');
-    Route::get('delete_product/{$id}', [ProductController::class, 'delete'])->name('product_delete');
-
+    // Route::get('/update_product/{$id}', [ProductController::class, 'update_product'])->name('product_update');
+    // Route::post('/update_product/{$id}', [ProductController::class, 'update'])->name('product_update_store');
+    // Route::get('/delete_product/{$id}', [ProductController::class, 'delete'])->name('product_delete');
 });
+
+    Route::get('/edit/product/{$id}', [ProductController::class, 'product_edit'])->name('product_edit');
